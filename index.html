@@ -377,9 +377,32 @@
                     q25: "B" };
 
                 const userAnswers = {
-                    q1: document.querySelector('input[name="q1"]:checked')?.value || "blank",
+           q1: document.querySelector('input[name="q1"]:checked')?.value || "blank",
                     q2: document.querySelector('input[name="q2"]:checked')?.value || "blank",
-                    q3: document.querySelector('input[name="q3"]:checked')?.value || "blank"
+                    q3: document.querySelector('input[name="q3"]:checked')?.value || "blank",
+                    q4: document.querySelector('input[name="q4"]:checked')?.value || "blank",
+                    q5: document.querySelector('input[name="q5"]:checked')?.value || "blank",
+                    q6: document.querySelector('input[name="q6"]:checked')?.value || "blank",
+                    q7: document.querySelector('input[name="q7"]:checked')?.value || "blank",
+                    q8: document.querySelector('input[name="q8"]:checked')?.value || "blank",
+                    q9: document.querySelector('input[name="q9"]:checked')?.value || "blank",
+                    q10: document.querySelector('input[name="q10"]:checked')?.value || "blank",
+                    q11: document.querySelector('input[name="q11"]:checked')?.value || "blank",
+                    q12: document.querySelector('input[name="q12"]:checked')?.value || "blank",
+                    q13: document.querySelector('input[name="q13"]:checked')?.value || "blank",
+                    q14: document.querySelector('input[name="q14"]:checked')?.value || "blank",
+                    q15: document.querySelector('input[name="q15"]:checked')?.value || "blank",
+                    q16: document.querySelector('input[name="q16"]:checked')?.value || "blank",
+                    q17: document.querySelector('input[name="q17"]:checked')?.value || "blank",
+                    q18: document.querySelector('input[name="q18"]:checked')?.value || "blank",
+                    q19: document.querySelector('input[name="q19"]:checked')?.value || "blank",
+                    q20: document.querySelector('input[name="q20"]:checked')?.value || "blank",
+                    q21: document.querySelector('input[name="q21"]:checked')?.value || "blank",
+                    q22: document.querySelector('input[name="q22"]:checked')?.value || "blank",
+                    q23: document.querySelector('input[name="q23"]:checked')?.value || "blank",
+                    q24: document.querySelector('input[name="q24"]:checked')?.value || "blank",
+                    q25: document.querySelector('input[name="q25"]:checked')?.value || "blank"
+
                 };
 
                 let score = 0;
@@ -397,17 +420,30 @@
                 }
 
                 const suggestions = [];
-                if (wrongOrBlank.some(q => [1].includes(parseInt(q)))) {
-                    suggestions.push("Revisit math basics.");
+                if (wrongOrBlank.some(q => [1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25].includes(parseInt(q)))) {
+                    suggestions.push("YOUR CUSTOM SUGGESTIONS ARE : ");
                 }
-                if (wrongOrBlank.some(q => [2].includes(parseInt(q)))) {
-                    suggestions.push("Brush up on world geography.");
+                if (wrongOrBlank.some(q => [1,16].includes(parseInt(q)))) {
+                    suggestions.push("রক্ত কপাটিকে এর টপিক টি ভালো করে পরো");
                 }
-                if (wrongOrBlank.some(q => [3].includes(parseInt(q)))) {
-                    suggestions.push("Study basic chemistry concepts.");
+                if (wrongOrBlank.some(q => [2,3,4,5,7,15,18,19,23].includes(parseInt(q)))) {
+                    suggestions.push("রক্তের কণিকা এর টপিক টিতে তোমার কিছুটা দুর্বলতা রয়েছে");
                 }
-                if (wrongOrBlank.some(q => [2, 3].includes(parseInt(q)))) {
-                    suggestions.push("Explore resources for interdisciplinary connections.");
+               if (wrongOrBlank.some(q => [14].includes(parseInt(q)))) {
+                    suggestions.push("রক্ত তঞ্চন টপিক টি দেখে নাও");
+                }
+               if (wrongOrBlank.some(q => [8,9,11,12,21,22,24].includes(parseInt(q)))) {
+                    suggestions.push("হৃৎপিন্ড টপিক এর প্রতিটা লাইন মন দিয়ে পর");
+                }
+               if (wrongOrBlank.some(q => [10,13,17,20].includes(parseInt(q)))) {
+                    suggestions.push("রক্ত রস এর বেসিক পড়েছো?");
+                }
+               if (wrongOrBlank.some(q => [25].includes(parseInt(q)))) {
+                    suggestions.push("ব্লাড গ্রুপ এর টপিক পর");
+                }
+
+                if (wrongOrBlank.some(q => [1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25].includes(parseInt(q)))) {
+                    suggestions.push("You can hire a tutor from Curator to teach you this topic .Or You can learn this topics by your own");
                 }
 
                 document.getElementById("exam-section").classList.add("hidden");
